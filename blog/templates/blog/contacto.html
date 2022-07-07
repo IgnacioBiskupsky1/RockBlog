@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginRegistro.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <div class="formulario">
+
+        <form class="login-form" name="form" action="Index.html" method="POST" id="formularioContacto">
+            <p class="login-text">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-lock fa-stack-1x"></i>
+                </span>
+            </p>
+
+            <input type="name" name="nombre" id="nombre" class="login-username" autofocus="true" placeholder="Nombre" />
+            <input type="email" name="correo" id="correo" class="login-username" autofocus="true" placeholder="Correo" />
+
+            <label for="asunto"></label>
+
+            <select name="asunto" id="asunto">
+                <option value="0">Seleccione opción</option>
+                <option value="consulta">Consulta</option>
+                <option value="queja">Queja</option>
+                <option value="otro">Otro</option>
+              
+            </select>
+
+            <textarea name="mensaje" class="login-username" id="mensaje" placeholder="Deja aquí tu comentario..."></textarea>
+
+            <div id="error"></div>
+            <input type="submit" name="Login" value="Enviar" class="login-submit" />
+
+        </form>
+    </div>
+
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+
+
+
+    <script src="javaScript/validarFormulario.js"></script>
+
+</body>
+
+</html>

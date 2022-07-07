@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginRegistro.css">
+    <title>Registrar Cuenta</title>
+</head>
+
+<body>
+    <div class="formulario">
+
+        <form class="login-form" name="form" action="Index.html" method="POST" id="formularioRegistro">
+            <p class="login-text">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-lock fa-stack-1x"></i>
+                </span>
+            </p>
+            <input type="name" id="nombre" name="nombre" class="login-username" autofocus="true" placeholder="Nombre" />
+            <input type="email" id="correo" name="correo" class="login-username" autofocus="true" placeholder="Correo" />
+            <input type="password" id="contrasena" name="contraseña" class="login-password" placeholder="Contraseña" />
+            <input type="password" id="confirmarContrasena" name="confirmarContraseña" class="login-password" placeholder="Confirmar Contraseña" />
+
+
+            <div id="error"></div>
+
+            <input type="submit" name="Login" class="login-submit" value="Enviar">
+        </form>
+
+    </div>
+
+    <a href="login.html" class="login-forgot-pass">¿Ya tienes cuenta?</a>
+    <div class="underlay-photo"></div>
+    <div class="underlay-black"></div>
+
+
+
+    <script src="javaScript/validarFormulario.js"></script>
+
+</body>
+
+</html>

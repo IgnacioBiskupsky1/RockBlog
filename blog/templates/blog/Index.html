@@ -1,0 +1,262 @@
+{% load socialaccount %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'blog/css/diseno.css' %}">
+
+    <title>ROCKBLOG</title>
+</head>
+
+
+<body>
+
+
+
+
+    <header>
+        <div class="col-12">
+            <h1>ROCKBLOG</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img class="img" src="https://cdn-icons-png.flaticon.com/512/26/26650.png" alt="guitarra">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'tienda' %}">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'form_post' %}">Agregar Noticias</a>
+                    </li>
+                </ul>
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Bienvenid@ {{ user.username }} </a></li>
+                </ul>
+                {% else %}
+                <span class="navbar-text">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'log_in' %}">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Registrarse</a>
+                    </li>
+                </ul>
+                </span>
+                {% endif %}
+            </div>
+        </nav>
+        
+
+
+
+    </header>
+
+
+
+
+
+    <section id="contenido">
+
+        <article class="articulo">
+            
+
+        
+
+
+            <h1>Mainstream</h1>
+            <div class="contenedor">   
+                <a href="#" target="_blank">
+                    <img src="https://picfiles.alphacoders.com/267/thumb-267821.jpg" width="250" height="150" class="img-responsive" alt="Metallica">
+                </a>
+            
+
+               
+                <a href="#" target="_blank">
+                    <img src="https://images4.alphacoders.com/195/thumbbig-195448.webp" width="250" height="150" class="img-responsive" alt="Anthrax">
+                </a>
+            
+
+               
+                <a href="#" target="_blank">
+                    <img src="https://images.alphacoders.com/179/thumbbig-179843.webp" width="250" height="150" class="img-responsive" alt="Megadeth">
+                </a>
+            
+
+              
+                <a href="#" target="_blank">
+                    <img src="https://images6.alphacoders.com/882/thumbbig-882090.webp" width="250" height="150"  class="img-responsive" alt="Slayer">
+                </a>
+            
+
+              
+                <a href="#" target="_blank">
+                    <img src="https://images4.alphacoders.com/566/thumbbig-566818.webp" width="250" height="150" class="img-responsive" alt="Iron Maiden">
+                </a>
+            
+
+             
+                <a href="#" target="_blank">
+                    <img src="https://images8.alphacoders.com/449/thumbbig-449213.webp" width="250" height="150" class="img-responsive" alt="Black Sabbath">
+                </a>
+            </div>
+
+            
+
+
+        
+        </article>
+
+
+    </section>
+
+    
+
+
+
+    <div class="clearfix"></div>
+    <!--para que no se suba el footer-->
+
+
+    
+
+
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #1f2022"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4"
+             style="background-color: #7c0202"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Un poco de información de nosotros:</span>
+      </div>
+      <!-- Left -->
+
+      
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">ROCKBLOG</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c0202; height: 2px"
+                />
+            <p>
+              Somos un dúo de estudiantes intentando crear una página web funcional de Duoc, esperamos hacer una página que les guste a los aficionados de la musica rock.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold"><a class="text-white" href="#"> Contacto </a></h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c0202; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Viña, V Región, Chile</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@ejemplo.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 5)"
+         >
+      Si tienes algún problema puedes contactarnos en: 
+      <a class="text-white" href="#">Contáctanos</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+                // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+    <!---js -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

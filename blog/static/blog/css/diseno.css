@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0%;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    /*color fondo pag */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*letra*/
+}
+
+header {
+    background-color: #7c0202;
+    padding-left: 0px;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0px;
+    padding-top: 0%;
+}
+
+
+
+.articulo {
+    color: white;
+    margin-top: 15px;
+    padding-left: 15%;
+}
+
+.articulo a {
+    margin: 20px 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+#contenido {
+    float: left;
+    width: 100%;
+}
+
+
+
+.contenedor a img {
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.img-responsive{
+    
+    margin: 10px;
+
+}
+
+
+
+a {
+    height: auto;
+}
+
